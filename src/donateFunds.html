@@ -16,6 +16,63 @@
     height: 50px;
     color: white;
   }
+  #PaymentPortal{
+    background-color:aliceblue;
+    border-radius:8px;
+    width:80%;
+    margin:auto;
+    box-shadow:5px 5px 8px black;
+  }
+  #mainDtext{
+    margin:auto;
+    padding:1.2em;
+    text-align: center;
+    font-family: Candara;
+  }
+  #pmtInformatic{
+    font-family: Candara;
+    margin-left:2em;
+    font-size:1.4em;
+  }
+  #hraftermDtext{
+    width:90%;    
+  }
+  
+  #cryptoImage{
+    flex-basis: 20%;
+    width:8em;
+    height: 8em;
+  }
+  #Portalinner{
+    padding:4em;
+    display:flex;
+  }
+  #PortalInner2{
+    padding:4em;
+    display:flex;
+  }
+  #pmtSpecifier{
+    flex-basis: 60%;
+    text-align: center;
+    padding:1.2em;
+    font-size:1.4em;
+  }
+  #mbox{
+    margin:auto;
+    flex-basis:60%;
+  }
+  #dbox{
+    display: block;
+    width:85%;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+  #commentInfo{
+    margin-left: 2.2em;
+    margin-bottom:1.2em;
+    padding:1.2em;
+    font-family: Candara;
+  }
     
 </style>
 <body >
@@ -23,12 +80,27 @@
     <br>
     <br>
     <a href="index.html"> Home</a>
-          
-    <textarea name="dbox" placeholder="optional message" id="dbox" cols="30" rows="10">
-        
+    <div id="PaymentPortal">
+        <h1 id="mainDtext">Your donation for building the next citizens of the nation</h1>
+        <hr id="hraftermDtext">
+        <span id="pmtInformatic">Crypto Payment Portal</span>
+        <div id="Portalinner">
+        <img id="cryptoImage" src="images/Cryptocurrency.png" alt="CryptoImage">
+        <span id="pmtSpecifier">To Pay,specify exact amount in ETH</span>
+        </div>
+        <div id="PortalInner2">
+            <span>Enter Amount</span>
+        <textarea onmousewheel="changeMoney(event)" name="mbox" title="mbox" id="mbox" cols="3" rows="2">0</textarea>
+        </div>
+        <div>
+            <span id="commentInfo">Comments towards your donation</span>
+        <textarea name="dbox" placeholder="optional message" id="dbox" cols="30" rows="10">
+            </textarea>
+        </div>
     </textarea>
-    <textarea onmousewheel="changeMoney(event)" name="mbox" title="mbox" id="mbox" cols="3" rows="2">0</textarea>
-
+    </div>
+    
+</div>
     <!-- <select title="causes" name="causes" id="causesList">
         <option value="child development">child development</option>
         <option value="child education">child education</option>
@@ -40,6 +112,7 @@
     account_Section = document.getElementById("account")
     //account.innerHTML = ;
 </script> -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
