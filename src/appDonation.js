@@ -24,7 +24,8 @@ App ={
             //console.log("ETher")
             //window.ethereum.enable()
             
-            web3.eth.sendTransaction({/* ... */})
+            //web3.eth.sendTransaction({/* ... */})
+            //web3.eth.sendTransaction
           } catch (error) {
             
           }
@@ -46,6 +47,7 @@ App ={
         
         App.account = web3.eth.accounts[0]
         web3.eth.defaultAccount = web3.eth.coinbase
+        
         //web3.personal.unlockAccount(App.account)
         //console.log(App.account)
       },
@@ -117,7 +119,16 @@ App ={
         App.setLoading(true)
         const amt=5;
         //const content = $('#newTask').val()
-        await App.donationList.makeDonation(amt,"Test Comment")
+        const toPayAmt=$("#mbox").val()
+        const commentStr=$("#dbox").val()
+        await App.donationList.makeDonation(toPayAmt,commentStr)
+        web3.eth.getAccounts(function(error,result){
+            web3.eth.sendTransaction({from:web3.eth.defaultAccount,
+            to:"0x0B683aF1EF8AB5F8A8A3229CC98fC21Ad58e5A23",
+            value:web3.utils.toWei(toPayAmt,"ether")
+        })
+        })
+        
         window.location.reload()
       },
     
