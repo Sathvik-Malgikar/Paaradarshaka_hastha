@@ -1,5 +1,5 @@
-var retreive = artifacts.require("./Donations.sol");
+var retreive = artifacts.require("retrieve");
 
 module.exports = function(deployer) {
-  deployer.deploy(DonationList);
+  deployer.deploy(retreive);
 };

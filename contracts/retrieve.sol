@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.5.0;
 
-contract redeem{
+contract retrieve{
 
 struct Donation{
     uint id;
@@ -14,8 +14,8 @@ struct Donation{
 mapping(uint=>Donation) public donations;
 
 
-function spendDonation(id){
-donations[id].spent=true
+function spendDonation(uint id) public {
+donations[id].spent=true;
 
 }
 
