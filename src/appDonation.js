@@ -122,7 +122,7 @@ App ={
         const toPayAmt=$("#mbox").val()
         const commentStr=$("#dbox").val()
         const donationCount = await App.donationList.donationCount()
-        console.log(donationCount)
+        console.log(donationCount.toNumber())
         await App.donationList.makeDonation(toPayAmt,commentStr)
         web3.eth.getAccounts(function(error,result){
             web3.eth.sendTransaction({from:web3.eth.defaultAccount,
