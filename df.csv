@@ -1,4 +1,4 @@
-﻿SlNo,School Name,School type,Board,Primary Vacancies,High School Vacancies,Total Vacancies,Reserved Seats Girls,Reserved PwD,Contact Details
+﻿Sl. No.,School Name,School type,Board,Primary Vacancies,High School Vacancies,Total Vacancies,Reserved Seats(Girls),Reserved Seats(PwD),Contact Details
 1,Little Angles School,Public,CBSE,32,25,57,23,1,9372756734
 2,Millenium World School,Public,State,60,34,94,37,1,9353889074
 3,Global Academy for learning,Private,CBSE,11,13,24,10,0,7899146392
@@ -10,3 +10,4 @@
 9,MES Public School,Public,State,23,7,30,12,0,8565457899
 10,Clarence High School,Private,ICSE,57,36,93,37,2,9448141881
 11,Akai Public School,Public,State,5,14,19,8,0,9480016151
+
