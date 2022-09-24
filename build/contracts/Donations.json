@@ -2826,7 +2826,54 @@
   },
   "networks": {
     "5777": {
-      "events": {},
+      "events": {
+        "0xa1360363a380198c80ddfca687f67800725c8cef1020a559ff141f3033b5ae35": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "amt",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "comment",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "completed",
+              "type": "bool"
+            }
+          ],
+          "name": "DonationMade",
+          "type": "event",
+          "signature": "0xa1360363a380198c80ddfca687f67800725c8cef1020a559ff141f3033b5ae35"
+        },
+        "0x85d88d323a7a355c7d6fad584a06936bee689dedce1674ca635c6ca1d71fe2fe": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "completed",
+              "type": "bool"
+            }
+          ],
+          "name": "DonationCompleted",
+          "type": "event",
+          "signature": "0x85d88d323a7a355c7d6fad584a06936bee689dedce1674ca635c6ca1d71fe2fe"
+        }
+      },
       "links": {},
       "address": "0x48eBc53A31ae7A6ad30b633FA8D394aFC088C544",
       "transactionHash": "0xee6685b568dd97c7a582f22e91672590d212ed4514b8edf4417171e6740b6e2a"
@@ -2837,7 +2884,7 @@
     
   ,
   "schemaVersion": "3.0.1",
-  "updatedAt": "2022-09-24T12:52:44.346Z",
+  "updatedAt": "2022-09-24T13:27:46.243Z",
   "devdoc": {
     "methods": {}
   },
