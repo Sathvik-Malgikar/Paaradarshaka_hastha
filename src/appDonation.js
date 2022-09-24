@@ -71,10 +71,10 @@ App ={
         App.setLoading(true)
     
         
-        $('#account').html(App.account)
+        //$('#account').html(App.account)
     
         
-        await App.renderDonations()
+        //await App.renderDonations()
     
         
         App.setLoading(false)
@@ -94,30 +94,30 @@ App ={
           const donationCompleted = donation[2]
     
          
-          const $newTaskTemplate = $donationTemplate.clone()
-          $newTaskTemplate.find('.content').html(donationContent)
-          $newTaskTemplate.find('input')
-                          .prop('name', donationId)
-                          .prop('checked', donationCompleted)
-                          .on('click', App.toggleCompleted)
+          //const $newTaskTemplate = $donationTemplate.clone()
+          //$newTaskTemplate.find('.content').html(donationContent)
+          //$newTaskTemplate.find('input')
+                        //   .prop('name', donationId)
+                        //   .prop('checked', donationCompleted)
+                        //   .on('click', App.toggleCompleted)
     
           
-          if (donationCompleted) {
-            $('#completedTaskList').append($newTaskTemplate)
-          } else {
-            $('#donationList').append($newTaskTemplate)
-          }
+        //   if (donationCompleted) {
+        //     $('#completedTaskList').append($newTaskTemplate)
+        //   } else {
+        //     $('#donationList').append($newTaskTemplate)
+        //   }
     
           
-          $newTaskTemplate.show()
+          //$newTaskTemplate.show()
         }
       },
     
       makeDonation: async () => {
         App.setLoading(true)
         const amt=5;
-        const content = $('#newTask').val()
-        await App.donationList.makeDonation(amt,content)
+        //const content = $('#newTask').val()
+        await App.donationList.makeDonation(amt,"Test Comment")
         window.location.reload()
       },
     
@@ -130,15 +130,15 @@ App ={
     
       setLoading: (boolean) => {
         App.loading = boolean
-        const loader = $('#loader')
-        const content = $('#content')
-        if (boolean) {
-          loader.show()
-          content.hide()
-        } else {
-          loader.hide()
-          content.show()
-        }
+        // const loader = $('#loader')
+        // const content = $('#content')
+        // if (boolean) {
+        //   loader.show()
+        //   content.hide()
+        // } else {
+        //   loader.hide()
+        //   content.show()
+        // }
       }
 }
 $(() => {
