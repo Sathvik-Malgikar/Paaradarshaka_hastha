@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="data"></p>
+    <script>
+        d3.csv('df.csv',function(error,data){
+            console.log(error);
+            console.log(data);
+
+            var fixeddata=data.map(function(d){
+                console.log(d);
+                return{
+                    SlNo:d.SlNo,
+                    SchoolName:d.SchoolName,
+                    SchoolType:d.SchoolType,
+                    Board:d.Board,
+                    PrimaryVacancies:d.PrimaryVacancies,
+                    HighSchoolVacancies:d.HighSchoolVacancies,
+                    TotalVacancies:d.TotalVacancies,
+                    ReservedSeatsGirls:+d.ReservedSeatsGirls,
+                    ReservedSeatsPwD:+d.ReservedSeatsPwD,
+                    ContactDetails:+d.ContactDetails
+                };
+            });
+
+            console.log(fixeddata)
+        })
+    </script>
+</body>
+</html>
