@@ -5,22 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #header {
+           padding-left: 30%;
+           padding-right: 30%;
+           font-size: larger;
+        }
+        .option{
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+        }
+    </style>
 </head>
-<body bgcolor="lime" >
-    <b id ="header">Fund Allocation poll page</b>
-    <br>
-    <br>
-    <a href="index.html"> Home</a>
-          
-    <button onclick="newPoll(event)">
+<body bgcolor="green" >
+    <b id ="header">Decision poll page</b><br>
+    <a href="index.html"> Home</a><br><br>
+    <label for="Name">Name</label>
+    <input type="text" id="name"><br><br>
+    <div>
+        <label for="Issues">Select Issue</label><br>
+        <div class="option 1">
+            <h1>Student Medication</h1>
+        </div>
+        <div class="option 2">
+            <h1>Student Medication</h1>
+        </div>
+        <div class="option 3">
+            <h1>Student Medication</h1>
+        </div>
+        <div class="option 4">
+            <h1>Student Medication</h1>
+        </div>
+    </div>
+    <!-- <button onclick="newPoll(event)">
         <img width="100px" src="announcement.jpg" alt="announcement">
-    </button>
+    </button> -->
 </body>
-<style>
-    #header {
-       padding-left: 30%;
-       padding-right: 30%;
-       font-size: larger;
-    }
-</style>
 </html>
