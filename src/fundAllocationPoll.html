@@ -3,43 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Poll Page</title>
     <style>
         #header {
-           padding-left: 30%;
-           padding-right: 30%;
-           font-size: larger;
+           text-align: center;
         }
-        .option{
+        #name{
+            font-size:20px;
+        }
+        .poll{
+            margin-top: 20px;
+            border:1px solid black;
+            border-radius: 5px;
             display:flex;
             flex-direction: column;
             gap:10px;
+            margin-left:200px;
+            margin-right:200px;
+            background-color: bisque;
+        }
+        .title{
+            margin:10px;
+            font-size: 20px;
+        }
+        .option{
+            margin:10px;
+            border:1px solid black;
+            padding:10px;
+            border-radius: 5px;
+            background-color: aliceblue;
         }
     </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $(this).css("background","yellow");
+            });
+        });
+    </script>
 </head>
-<body bgcolor="green" >
-    <b id ="header">Decision poll page</b><br>
+<body>
+    <h1 id ="header">Decision poll page</h1><br>
     <a href="index.html"> Home</a><br><br>
-    <label for="Name">Name</label>
+    <label for="Name" id="name">Name:</label>
     <input type="text" id="name"><br><br>
-    <div>
-        <label for="Issues">Select Issue</label><br>
+    <div class="poll">
+        <span class="title">Select Issue</span>
         <div class="option 1">
-            <h1>Student Medication</h1>
+            <button id="btn" >1.Student Medication</button>
         </div>
         <div class="option 2">
-            <h1>Student Medication</h1>
+            <button id="btn">2.Student Education</button>
         </div>
         <div class="option 3">
-            <h1>Student Medication</h1>
+            <button id="btn">3.Student Enrichment</button>
         </div>
         <div class="option 4">
-            <h1>Student Medication</h1>
+            <button id="btn">4.Student Shelter</button>
         </div>
     </div>
-    <!-- <button onclick="newPoll(event)">
-        <img width="100px" src="announcement.jpg" alt="announcement">
-    </button> -->
 </body>
 </html>
