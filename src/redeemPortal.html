@@ -27,10 +27,18 @@ textarea {
         flex-direction: column;
         display: flex;
     }
-    #reason {
+    #reason,#idfield {
         background-color: darkslategray;
         border: solid green 3px;
         width: 200px;
+    }
+    #retrieve {
+        background-color: red;
+        width: 320px;
+        height: 65px;
+        border-radius: 10px;
+        font-size: x-large;
+        color: white;
     }
 </style>
 <body>
@@ -38,10 +46,13 @@ textarea {
    <span>retrieve donations portal for NGO </span> 
    <br><br>
 <div>
-    <textarea name="reason" id="reason" cols="30" rows="10">where will the money be spent?</textarea>
+    <textarea title="reason" name="reason" id="reason" cols="30" rows="10">where will the money be spent?</textarea>
     &nbsp &nbsp &nbsp
-    <textarea name="reason" id="reason" cols="30" rows="10">enter the id of the donatiion you want to retrieve</textarea>
-
+    <textarea title="idfield" name="idfield" id="idfield" cols="30" rows="10">enter the id of the donatiion you want to retrieve</textarea>
 </div>
+<br>
+<button id="retrieve">
+    Retrieve Ethereum to rupees!
+</button>
 </body>
 </html>
