@@ -53,12 +53,12 @@ App ={
       loadContract: async () => {
         
         const donationList = await $.getJSON('Donations.json')
-        //console.log(todoList)
+        //console.log(donationList)
         App.contracts.DonationList = TruffleContract(donationList)
         App.contracts.DonationList.setProvider(App.web3Provider)
     
         
-        App.todoList = await App.contracts.TodoList.deployed()
+        App.donationList = await App.contracts.donationList.deployed()
       },
     
       render: async () => {
@@ -74,38 +74,38 @@ App ={
         $('#account').html(App.account)
     
         
-        await App.renderTasks()
+        await App.renderDonations()
     
         
         App.setLoading(false)
       },
     
-      renderTasks: async () => {
+      renderDonations: async () => {
         
-        const donationCount = await App.todoList.donationCount()
-        //const $taskTemplate = $('.taskTemplate')
+        const donationCount = await App.donationList.donationCount()
+        //const $donationTemplate = $('.donationTemplate')
     
         
         for (var i = 1; i <= donationCount; i++) {
           
-          const task = await App.todoList.tasks(i)
-          const taskId = task[0].toNumber()
-          const taskContent = task[1]
-          const taskCompleted = task[2]
+          const donation = await App.donationList.donations(i)
+          const donationId = donation[0].toNumber()
+          const donationContent = donation[1]
+          const donationCompleted = donation[2]
     
          
-          const $newTaskTemplate = $taskTemplate.clone()
-          $newTaskTemplate.find('.content').html(taskContent)
+          const $newTaskTemplate = $donationTemplate.clone()
+          $newTaskTemplate.find('.content').html(donationContent)
           $newTaskTemplate.find('input')
-                          .prop('name', taskId)
-                          .prop('checked', taskCompleted)
+                          .prop('name', donationId)
+                          .prop('checked', donationCompleted)
                           .on('click', App.toggleCompleted)
     
           
-          if (taskCompleted) {
+          if (donationCompleted) {
             $('#completedTaskList').append($newTaskTemplate)
           } else {
-            $('#taskList').append($newTaskTemplate)
+            $('#donationList').append($newTaskTemplate)
           }
     
           
@@ -117,14 +117,14 @@ App ={
         App.setLoading(true)
         const amt=5;
         const content = $('#newTask').val()
-        await App.todoList.makeDonation(amt,content)
+        await App.donationList.makeDonation(amt,content)
         window.location.reload()
       },
     
       toggleCompleted: async (e) => {
         App.setLoading(true)
-        const taskId = e.target.name
-        await App.todoList.toggleCompleted(taskId)
+        const donationId = e.target.name
+        await App.donationList.toggleCompleted(donationId)
         window.location.reload()
       },
     
