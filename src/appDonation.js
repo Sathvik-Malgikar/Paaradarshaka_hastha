@@ -58,7 +58,7 @@ App ={
         App.contracts.DonationList.setProvider(App.web3Provider)
     
         
-        App.donationList = await App.contracts.donationList.deployed()
+        App.donationList = await App.contracts.DonationList.deployed()
       },
     
       render: async () => {
