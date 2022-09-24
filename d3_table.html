@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      td,th{
+        padding:5px;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <p class="data"></p>
+    <script>
+      var table;
+     var tabulate = function (data,columns) {
+  table = d3.select('body').append('table').style('border','1px double black');
+	var thead = table.append('thead')
+	var tbody = table.append('tbody')
+
+	thead.append('tr')
+	  .selectAll('th')
+	    .data(columns)
+	    .enter()
+	  .append('th')
+	    .text(function (d) { return d })
+        .style('border','1px double black');
+
+	var rows = tbody.selectAll('tr')
+	    .data(data)
+	    .enter()
+	  .append('tr')
+      .style('border','1px double black','red');
+
+	var cells = rows.selectAll('td')
+	    .data(function(row) {
+	    	return columns.map(function (column) {
+          console.log(row)
+          // console.log(row[column])
+	    		return { column: column, value: row[column] }
+	      })
+      })
+      .enter()
+    .append('td')
+      .text(function (d) { return d.value })
+      .style('border','1px double black');
+
+  return table;
+}
+
+d3.csv('df.csv',function (data) {
+	var columns = ['Sl.no','School Name','School Type','Board','Primary Vaancies','High school Vacancies','Total Vacancies','Reserved Seats(Girls)','Reserved Seats(PWD)','Contact Details']
+  // var columns=['Gender','Height','Weight'];
+  // var columns=['RI','Na','Mg','Al','Si','K','Ca','Ba','Fe','Type']
+  tabulate(data,columns)
+})
+    </script>
+</body>
+</html>
