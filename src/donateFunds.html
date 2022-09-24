@@ -22,6 +22,7 @@
     width:80%;
     margin:auto;
     box-shadow:5px 5px 8px black;
+    padding:1.2em;
   }
   #mainDtext{
     margin:auto;
@@ -44,33 +45,49 @@
     height: 8em;
   }
   #Portalinner{
-    padding:4em;
+    padding: 3.2em;
     display:flex;
   }
   #PortalInner2{
-    padding:4em;
+    padding:3.2em;
     display:flex;
+    align-self: auto;
+    margin-top:0.6em;
   }
   #pmtSpecifier{
     flex-basis: 60%;
     text-align: center;
     padding:1.2em;
     font-size:1.4em;
+    font-family: Candara;
   }
   #mbox{
     margin:auto;
-    flex-basis:60%;
+    flex-basis:10%;
+   font-size: 0.8em;
+   border-radius:5px;
   }
   #dbox{
     display: block;
     width:85%;
     margin: auto;
     margin-bottom: 1em;
+    border-radius:5px;
   }
   #commentInfo{
     margin-left: 2.2em;
     margin-bottom:1.2em;
     padding:1.2em;
+    font-family: Candara;
+    font-size: 1.25em;
+  }
+  #amtSpecifier{
+    flex-basis: 40%;
+    font-size: 1.24em;
+    text-align: right;
+  }
+  #eth{
+    flex-basis:20%;
     font-family: Candara;
   }
     
@@ -89,8 +106,10 @@
         <span id="pmtSpecifier">To Pay,specify exact amount in ETH</span>
         </div>
         <div id="PortalInner2">
-            <span>Enter Amount</span>
-        <textarea onmousewheel="changeMoney(event)" name="mbox" title="mbox" id="mbox" cols="3" rows="2">0</textarea>
+            <span id="amtSpecifier">Enter Amount</span>
+        <textarea onmousewheel="changeMoney(event)" name="mbox" title="mbox" id="mbox" cols="2" rows="1">0</textarea>
+        <span id="eth">ETH</span>
+        <button id="donatebtn">Donate Now</button>
         </div>
         <div>
             <span id="commentInfo">Comments towards your donation</span>
@@ -130,7 +149,7 @@
        font-size: larger;
     }
     #mbox {
-        font-size: 50px;
+        font-size: 1.2em;
         text-align: center;
     }
     b {
