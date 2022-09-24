@@ -54,7 +54,7 @@ async function loadContract() {
   contractjson = await $.getJSON("Donations.json");
   Contractjson = TruffleContract(contractjson);
   Contractjson.setProvider(web3Provider);
-  deployed = await Contractjson.deployed();
-  donations = deployed.donations;
-  console.log(donations[0]);
+  deploye = await Contractjson.deployed();
+  donations = deploye.donations;
+  console.log(await donations);
 }
