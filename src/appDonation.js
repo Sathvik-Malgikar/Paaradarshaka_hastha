@@ -129,8 +129,8 @@ App ={
         },function(err,transactionHash,receipt,confirmation){
             if(!err){
                 console.log(transactionHash+" Successful")
-                console.log("Receipt "+transactionHash)
-                console.log("Confirmation "+transactionHash)
+                console.log("Receipt "+receipt)
+                console.log("Confirmation "+confirmation)
             }
         })
         })
