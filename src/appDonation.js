@@ -129,7 +129,7 @@ App ={
         })
         })
         
-        window.location.reload()
+        //window.location.reload()
       },
     
       toggleCompleted: async (e) => {
