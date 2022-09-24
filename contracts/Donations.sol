@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.5.0;
 
 contract Donations{
@@ -9,6 +10,7 @@ contract Donations{
         uint amt;
         string comment;
         bool completed;
+        bool spent;
     }
 
     mapping(uint=>Donation) public donations;
@@ -17,7 +19,8 @@ event DonationMade(
     uint id,
     uint amt,
     string comment,
-    bool completed
+    bool completed,
+    bool spent
 );
     event DonationCompleted(uint id,
     bool completed);
@@ -27,8 +30,8 @@ event DonationMade(
     }
     function makeDonation(uint t_amt,string memory _content) public {
         donationCount ++;
-        donations[donationCount]=Donation(donationCount,t_amt,_content,false);
-        emit DonationMade(donationCount,t_amt,_content,false);
+        donations[donationCount]=Donation(donationCount,t_amt,_content,false,false);
+        emit DonationMade(donationCount,t_amt,_content,false,false);
     }
     function toggleCompleted(uint _id) public {
         Donation memory _donation=donations[_id];

@@ -48,8 +48,8 @@ if (window.load()) {
 }
 
 async function loadContract(){
-    contractjson = await $.getJSON("redeem.json")
+    contractjson = await $.getJSON("retrieve.json")
     Contractjson = TruffleContract(contractjson)
-    Contractjson.setProvider web3Provider
+    Contractjson.setProvider(web3Provider)
     console.log( Contractjson.deployed())
     }
