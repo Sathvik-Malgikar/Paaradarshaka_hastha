@@ -26,6 +26,10 @@
         display: none;
       }
 
+      .links {
+       margin: auto;
+      }
+
       form {
         width: 350px;
         margin-bottom: 10px;
@@ -55,7 +59,6 @@
         <main role="main" class="col-lg-12 d-flex justify-content-center">
           <div id="loader" class="text-center">
             <p class="text-center">Loading...</p>
-            <a href="fundAllocationPoll.html"> <img width="200px"src="moneyImage.jpg" alt="fundAllocationPoll"></a>
           </div>
           <div id="content">
             <form onSubmit="App.createTask(); return false;">
@@ -72,8 +75,10 @@
             </ul>
             <ul id="completedTaskList" class="list-unstyled">
             </ul>
-          </div>
-        </main>
+          </main>
+        </div><br>
+          <a class="links" href="fundAllocationPoll.html"> <img width="200px"src="moneyImage.jpg" alt="fundAllocationPoll"></a>
+          <a class="links" href="donateFunds.html"> <img width="200px"src="donate.jpg" alt="donate"></a>
       </div>
     </div>
 
