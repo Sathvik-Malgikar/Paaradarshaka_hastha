@@ -6,7 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body bgcolor="#ABCD1B" >
+    <b id ="header">Donate for your favourite cause!</b>
+    <br>
+    <br>
+    <a href="index.html"> Home</a>
+          
+    <textarea name="dbox" placeholder="optional message" id="dbox" cols="30" rows="10">
+        
+    </textarea>
+    <textarea onmousewheel="changeMoney(event)" name="mbox" title="mbox" id="mbox" cols="3" rows="2">0 ETH</textarea>
+
+    <!-- <select title="causes" name="causes" id="causesList">
+        <option value="child development">child development</option>
+        <option value="child education">child education</option>
+        <option value="collaboration events">collaboration events</option>
+    </select> -->
+
 </body>
+<script src="donatefndsscript.js"></script>
+<style>
+    #header {
+       padding-left: 30%;
+       padding-right: 30%;
+       font-size: larger;
+    }
+    #mbox {
+        font-size: 100px;
+        text-align: center;
+    }
+    b {
+        color :darkgreen
+    }
+    textarea {
+        color :darkgreen
+    }
+</style>
 </html>
