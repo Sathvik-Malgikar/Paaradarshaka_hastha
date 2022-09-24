@@ -71,7 +71,7 @@ App ={
         App.setLoading(true)
     
         
-        $('#address').html("Account Address"+App.account)
+        $('#address').html("Account Address "+App.account)
     
         
         //await App.renderDonations()
