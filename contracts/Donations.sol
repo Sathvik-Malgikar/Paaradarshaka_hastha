@@ -15,6 +15,12 @@ contract Donations{
 
     mapping(uint=>Donation) public donations;
 
+
+function spendDonation(uint id) public {
+donations[id].spent=true;
+
+}
+
 event DonationMade(
     uint id,
     uint amt,

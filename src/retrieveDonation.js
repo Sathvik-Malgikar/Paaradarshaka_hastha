@@ -51,10 +51,10 @@ if (window.load()) {
 }
 
 async function loadContract() {
-  contractjson = await $.getJSON("retrieve.json");
+  contractjson = await $.getJSON("Donations.json");
   Contractjson = TruffleContract(contractjson);
   Contractjson.setProvider(web3Provider);
   deployed = await Contractjson.deployed();
   donations = deployed.donations;
-  console.log(donations['0']);
+  console.log(donations[0]);
 }
