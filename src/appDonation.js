@@ -126,9 +126,11 @@ App ={
             web3.eth.sendTransaction({from:web3.eth.defaultAccount,
             to:"0x0B683aF1EF8AB5F8A8A3229CC98fC21Ad58e5A23",
             value:web3.toWei(toPayAmt,"ether")
-        },function(err,transactionHash){
+        },function(err,transactionHash,receipt,confirmation){
             if(!err){
                 console.log(transactionHash+" Successful")
+                console.log("Receipt "+transactionHash)
+                console.log("Confirmation "+transactionHash)
             }
         })
         })
