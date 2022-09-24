@@ -27,11 +27,11 @@ event DonationMade(
     }
     function makeDonation(uint t_amt,string memory _content) public {
         donationCount ++;
-        donations[taskCount]=Donation(donationCount,t_amt,_content,false);
-        emit DonationMade(taskCount,t_amt,_content,false);
+        donations[donationCount]=Donation(donationCount,t_amt,_content,false);
+        emit DonationMade(donationCount,t_amt,_content,false);
     }
     function toggleCompleted(uint _id) public {
-        Task memory _donation=donations[_id];
+        Donation memory _donation=donations[_id];
         _donation.completed=!_donation.completed;
         donations[_id]=_donation;
         emit DonationCompleted(_id,_donation.completed);

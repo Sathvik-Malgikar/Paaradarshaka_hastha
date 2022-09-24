@@ -52,10 +52,10 @@ App ={
     
       loadContract: async () => {
         
-        const todoList = await $.getJSON('TodoList.json')
+        const donationList = await $.getJSON('Donations.json')
         //console.log(todoList)
-        App.contracts.TodoList = TruffleContract(todoList)
-        App.contracts.TodoList.setProvider(App.web3Provider)
+        App.contracts.DonationList = TruffleContract(donationList)
+        App.contracts.DonationList.setProvider(App.web3Provider)
     
         
         App.todoList = await App.contracts.TodoList.deployed()
@@ -82,11 +82,11 @@ App ={
     
       renderTasks: async () => {
         
-        const taskCount = await App.todoList.taskCount()
-        const $taskTemplate = $('.taskTemplate')
+        const donationCount = await App.todoList.donationCount()
+        //const $taskTemplate = $('.taskTemplate')
     
         
-        for (var i = 1; i <= taskCount; i++) {
+        for (var i = 1; i <= donationCount; i++) {
           
           const task = await App.todoList.tasks(i)
           const taskId = task[0].toNumber()
