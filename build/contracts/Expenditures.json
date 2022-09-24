@@ -26,20 +26,8 @@
       "name": "donations",
       "outputs": [
         {
-          "name": "amt",
-          "type": "uint256"
-        },
-        {
-          "name": "month",
-          "type": "string"
-        },
-        {
-          "name": "donation_id",
-          "type": "string"
-        },
-        {
-          "name": "spent",
-          "type": "bool"
+          "name": "",
+          "type": "address"
         }
       ],
       "payable": false,
@@ -47,11 +35,11 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b50610304806100206000396000f3fe60806040526004361061004b5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663f0b707918114610050578063f8626af814610077575b600080fd5b34801561005c57600080fd5b50610065610191565b60408051918252519081900360200190f35b34801561008357600080fd5b506100a16004803603602081101561009a57600080fd5b5035610197565b60405180858152602001806020018060200184151515158152602001838103835286818151815260200191508051906020019080838360005b838110156100f25781810151838201526020016100da565b50505050905090810190601f16801561011f5780820380516001836020036101000a031916815260200191505b50838103825285518152855160209182019187019080838360005b8381101561015257818101518382015260200161013a565b50505050905090810190601f16801561017f5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b60005481565b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156102335780601f1061020857610100808354040283529160200191610233565b820191906000526020600020905b81548152906001019060200180831161021657829003601f168201915b50505060028085018054604080516020601f60001961010060018716150201909416959095049283018590048502810185019091528181529596959450909250908301828280156102c55780601f1061029a576101008083540402835291602001916102c5565b820191906000526020600020905b8154815290600101906020018083116102a857829003601f168201915b5050506003909301549192505060ff168456fea165627a7a723058208dceac00669eb7db663e7fa738e2d698abfc73fb4ba609fe8207a4a62b2a642f0029",
-  "deployedBytecode": "0x60806040526004361061004b5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663f0b707918114610050578063f8626af814610077575b600080fd5b34801561005c57600080fd5b50610065610191565b60408051918252519081900360200190f35b34801561008357600080fd5b506100a16004803603602081101561009a57600080fd5b5035610197565b60405180858152602001806020018060200184151515158152602001838103835286818151815260200191508051906020019080838360005b838110156100f25781810151838201526020016100da565b50505050905090810190601f16801561011f5780820380516001836020036101000a031916815260200191505b50838103825285518152855160209182019187019080838360005b8381101561015257818101518382015260200161013a565b50505050905090810190601f16801561017f5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b60005481565b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156102335780601f1061020857610100808354040283529160200191610233565b820191906000526020600020905b81548152906001019060200180831161021657829003601f168201915b50505060028085018054604080516020601f60001961010060018716150201909416959095049283018590048502810185019091528181529596959450909250908301828280156102c55780601f1061029a576101008083540402835291602001916102c5565b820191906000526020600020905b8154815290600101906020018083116102a857829003601f168201915b5050506003909301549192505060ff168456fea165627a7a723058208dceac00669eb7db663e7fa738e2d698abfc73fb4ba609fe8207a4a62b2a642f0029",
-  "sourceMap": "27:234:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:234:1;;;;;;;",
-  "deployedSourceMap": "27:234:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;53:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:22:1;;;;;;;;;;;;;;;;;;;;209:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;209:44:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;209:44:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;209:44:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;209:44:1;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;209:44:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;53:22;;;;:::o;209:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;209:44:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;209:44:1;;;;;;;;;;;-1:-1:-1;;209:44:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;209:44:1;;-1:-1:-1;209:44:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;209:44:1;;;;;;;-1:-1:-1;;209:44:1;;;:::o",
-  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract Expenditures{\r\n\r\nuint public totalitems;\r\n\r\n  struct Expenditures{\r\n        uint amt;\r\n        string month;\r\n        string donation_id;\r\n        bool spent;\r\n    }\r\n\r\n    mapping(uint=>Expenditures) public donations;\r\n\r\n\r\n}\r\n",
+  "bytecode": "0x608060405234801561001057600080fd5b5061011a806100206000396000f3fe60806040526004361060485763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663f0b707918114604d578063f8626af8146071575b600080fd5b348015605857600080fd5b50605f60c0565b60408051918252519081900360200190f35b348015607c57600080fd5b50609760048036036020811015609157600080fd5b503560c6565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60005481565b60016020526000908152604090205473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a72305820113d333a285db920ca15797cc7d0dd58267301bc8a701b5686eb83138f1446930029",
+  "deployedBytecode": "0x60806040526004361060485763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663f0b707918114604d578063f8626af8146071575b600080fd5b348015605857600080fd5b50605f60c0565b60408051918252519081900360200190f35b348015607c57600080fd5b50609760048036036020811015609157600080fd5b503560c6565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60005481565b60016020526000908152604090205473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a72305820113d333a285db920ca15797cc7d0dd58267301bc8a701b5686eb83138f1446930029",
+  "sourceMap": "28:234:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:234:1;;;;;;;",
+  "deployedSourceMap": "28:234:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;54:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;54:22:1;;;;;;;;;;;;;;;;;;;;210:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;210:44:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;210:44:1;;;;;;;;;;;;;;;;;;;;;;54:22;;;;:::o;210:44::-;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.5.0;\r\n\r\ncontract Expenditures{\r\n\r\nuint public totalitems;\r\n\r\n  struct expenditures{\r\n        uint amt;\r\n        string month;\r\n        string donation_id;\r\n        bool spent;\r\n    }\r\n\r\n    mapping(uint=>Expenditures) public donations;\r\n\r\n\r\n}\r\n",
   "sourcePath": "C:/Users/Srujan/Documents/Paaradarshaka_hastha/contracts/Expenditures.sol",
   "ast": {
     "absolutePath": "/C/Users/Srujan/Documents/Paaradarshaka_hastha/contracts/Expenditures.sol",
@@ -67,12 +55,12 @@
         "id": 106,
         "literals": [
           "solidity",
-          "^",
+          ">=",
           "0.5",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "src": "0:24:1"
       },
       {
         "baseContracts": [],
@@ -93,7 +81,7 @@
             "name": "totalitems",
             "nodeType": "VariableDeclaration",
             "scope": 122,
-            "src": "53:22:1",
+            "src": "54:22:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -104,7 +92,7 @@
               "id": 107,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "53:4:1",
+              "src": "54:4:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -114,7 +102,7 @@
             "visibility": "public"
           },
           {
-            "canonicalName": "Expenditures.Expenditures",
+            "canonicalName": "Expenditures.expenditures",
             "id": 117,
             "members": [
               {
@@ -123,7 +111,7 @@
                 "name": "amt",
                 "nodeType": "VariableDeclaration",
                 "scope": 117,
-                "src": "112:8:1",
+                "src": "113:8:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -134,7 +122,7 @@
                   "id": 109,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "112:4:1",
+                  "src": "113:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -149,7 +137,7 @@
                 "name": "month",
                 "nodeType": "VariableDeclaration",
                 "scope": 117,
-                "src": "131:12:1",
+                "src": "132:12:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -160,7 +148,7 @@
                   "id": 111,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "131:6:1",
+                  "src": "132:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -175,7 +163,7 @@
                 "name": "donation_id",
                 "nodeType": "VariableDeclaration",
                 "scope": 117,
-                "src": "154:18:1",
+                "src": "155:18:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -186,7 +174,7 @@
                   "id": 113,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "154:6:1",
+                  "src": "155:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -201,7 +189,7 @@
                 "name": "spent",
                 "nodeType": "VariableDeclaration",
                 "scope": 117,
-                "src": "183:10:1",
+                "src": "184:10:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -212,7 +200,7 @@
                   "id": 115,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "183:4:1",
+                  "src": "184:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -222,10 +210,10 @@
                 "visibility": "internal"
               }
             ],
-            "name": "Expenditures",
+            "name": "expenditures",
             "nodeType": "StructDefinition",
             "scope": 122,
-            "src": "82:119:1",
+            "src": "83:119:1",
             "visibility": "public"
           },
           {
@@ -234,12 +222,12 @@
             "name": "donations",
             "nodeType": "VariableDeclaration",
             "scope": 122,
-            "src": "209:44:1",
+            "src": "210:44:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Expenditures_$117_storage_$",
-              "typeString": "mapping(uint256 => struct Expenditures.Expenditures)"
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_contract$_Expenditures_$122_$",
+              "typeString": "mapping(uint256 => contract Expenditures)"
             },
             "typeName": {
               "id": 120,
@@ -247,28 +235,28 @@
                 "id": 118,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "217:4:1",
+                "src": "218:4:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "209:27:1",
+              "src": "210:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Expenditures_$117_storage_$",
-                "typeString": "mapping(uint256 => struct Expenditures.Expenditures)"
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_contract$_Expenditures_$122_$",
+                "typeString": "mapping(uint256 => contract Expenditures)"
               },
               "valueType": {
                 "contractScope": null,
                 "id": 119,
                 "name": "Expenditures",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 117,
-                "src": "223:12:1",
+                "referencedDeclaration": 122,
+                "src": "224:12:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Expenditures_$117_storage_ptr",
-                  "typeString": "struct Expenditures.Expenditures"
+                  "typeIdentifier": "t_contract$_Expenditures_$122",
+                  "typeString": "contract Expenditures"
                 }
               }
             },
@@ -277,10 +265,10 @@
           }
         ],
         "scope": 123,
-        "src": "27:234:1"
+        "src": "28:234:1"
       }
     ],
-    "src": "0:263:1"
+    "src": "0:264:1"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/Srujan/Documents/Paaradarshaka_hastha/contracts/Expenditures.sol",
@@ -296,12 +284,12 @@
         "id": 106,
         "literals": [
           "solidity",
-          "^",
+          ">=",
           "0.5",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "src": "0:24:1"
       },
       {
         "baseContracts": [],
@@ -322,7 +310,7 @@
             "name": "totalitems",
             "nodeType": "VariableDeclaration",
             "scope": 122,
-            "src": "53:22:1",
+            "src": "54:22:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -333,7 +321,7 @@
               "id": 107,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "53:4:1",
+              "src": "54:4:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -343,7 +331,7 @@
             "visibility": "public"
           },
           {
-            "canonicalName": "Expenditures.Expenditures",
+            "canonicalName": "Expenditures.expenditures",
             "id": 117,
             "members": [
               {
@@ -352,7 +340,7 @@
                 "name": "amt",
                 "nodeType": "VariableDeclaration",
                 "scope": 117,
-                "src": "112:8:1",
+                "src": "113:8:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -363,7 +351,7 @@
                   "id": 109,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "112:4:1",
+                  "src": "113:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -378,7 +366,7 @@
                 "name": "month",
                 "nodeType": "VariableDeclaration",
                 "scope": 117,
-                "src": "131:12:1",
+                "src": "132:12:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -389,7 +377,7 @@
                   "id": 111,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "131:6:1",
+                  "src": "132:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -404,7 +392,7 @@
                 "name": "donation_id",
                 "nodeType": "VariableDeclaration",
                 "scope": 117,
-                "src": "154:18:1",
+                "src": "155:18:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -415,7 +403,7 @@
                   "id": 113,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "154:6:1",
+                  "src": "155:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -430,7 +418,7 @@
                 "name": "spent",
                 "nodeType": "VariableDeclaration",
                 "scope": 117,
-                "src": "183:10:1",
+                "src": "184:10:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -441,7 +429,7 @@
                   "id": 115,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "183:4:1",
+                  "src": "184:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -451,10 +439,10 @@
                 "visibility": "internal"
               }
             ],
-            "name": "Expenditures",
+            "name": "expenditures",
             "nodeType": "StructDefinition",
             "scope": 122,
-            "src": "82:119:1",
+            "src": "83:119:1",
             "visibility": "public"
           },
           {
@@ -463,12 +451,12 @@
             "name": "donations",
             "nodeType": "VariableDeclaration",
             "scope": 122,
-            "src": "209:44:1",
+            "src": "210:44:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Expenditures_$117_storage_$",
-              "typeString": "mapping(uint256 => struct Expenditures.Expenditures)"
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_contract$_Expenditures_$122_$",
+              "typeString": "mapping(uint256 => contract Expenditures)"
             },
             "typeName": {
               "id": 120,
@@ -476,28 +464,28 @@
                 "id": 118,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "217:4:1",
+                "src": "218:4:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "209:27:1",
+              "src": "210:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Expenditures_$117_storage_$",
-                "typeString": "mapping(uint256 => struct Expenditures.Expenditures)"
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_contract$_Expenditures_$122_$",
+                "typeString": "mapping(uint256 => contract Expenditures)"
               },
               "valueType": {
                 "contractScope": null,
                 "id": 119,
                 "name": "Expenditures",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 117,
-                "src": "223:12:1",
+                "referencedDeclaration": 122,
+                "src": "224:12:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Expenditures_$117_storage_ptr",
-                  "typeString": "struct Expenditures.Expenditures"
+                  "typeIdentifier": "t_contract$_Expenditures_$122",
+                  "typeString": "contract Expenditures"
                 }
               }
             },
@@ -506,10 +494,10 @@
           }
         ],
         "scope": 123,
-        "src": "27:234:1"
+        "src": "28:234:1"
       }
     ],
-    "src": "0:263:1"
+    "src": "0:264:1"
   },
   "compiler": {
     "name": "solc",
@@ -517,7 +505,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2022-09-24T14:38:42.386Z",
+  "updatedAt": "2022-09-24T19:01:29.635Z",
   "devdoc": {
     "methods": {}
   },

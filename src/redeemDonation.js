@@ -40,8 +40,16 @@ console.log(account)
 load = async () => {
 await loadweb3()
 await loadAccount()
+await loadContract()
 
 }
 if (window.load()) {
     load()
 }
+
+async function loadContract(){
+    contractjson = await $.getJSON("redeem.json")
+    Contractjson = TruffleContract(contractjson)
+    
+    console.log(Contractjson)
+    }

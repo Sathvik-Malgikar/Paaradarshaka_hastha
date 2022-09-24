@@ -4,5 +4,4 @@ contract redeem{
 
 string id;
 
-
 }
