@@ -48,6 +48,8 @@ if (window.load()) {
 }
 
 async function loadContract(){
-    contractjson = 
-    console.log(contractjson)
+    contractjson = await $.getJSON("redeem.json")
+    Contractjson = TruffleContract(contractjson)
+    
+    console.log(Contractjson)
     }
