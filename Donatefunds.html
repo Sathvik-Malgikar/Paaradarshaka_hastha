@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <style>
@@ -61,9 +62,9 @@
     font-size:1.4em;
     font-family: Candara;
   }
-  #user-details{
+  #userdetails{
     margin-left:2.5em;
-    font-size: 1.2em;
+    font-size:1.2em;
   }
   #mbox{
     margin:auto;
@@ -109,13 +110,13 @@
         <img id="cryptoImage" src="images/Cryptocurrency.png" alt="CryptoImage">
         <span id="pmtSpecifier">To Pay,specify exact amount in ETH</span>
         </div>
-        <div id="user-details">
-            <span id="user">User details:</span><br><br>
+        <div id="userdetails">
+            <span id="user">User Details:</span><br><br>
             <span id="address">Address:</span>
         </div>
         <div id="PortalInner2">
             <span id="amtSpecifier">Enter Amount</span>
-        <textarea onmousewheel="changeMoney(event)" name="mbox" title="mbox" id="mbox" cols="2" rows="1">0</textarea>
+        <textarea onmousewheel="changeMoney(event)" name="mbox" title="mbox" id="mbox" cols="3" rows="1">0</textarea>
         <span id="eth">ETH</span>
         <button id="donatebtn">Donate Now</button>
         </div>
@@ -133,20 +134,27 @@
         <option value="child education">child education</option>
         <option value="collaboration events">collaboration events</option>
     </select> -->
-
+    <script>
+        $("#donatebtn").on("click",function(){
+            const toPayAmt=parseInt($("#mbox").val())
+            const commentStr=$("#dbox").val()
+            App.makeDonation(toPayAmt,commentStr)
+        
+        })</script>
 </body>
 <!-- <script>
     account_Section = document.getElementById("account")
     //account.innerHTML = ;
 </script> -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/web3.js-0.20.6/dist/web3.min.js"></script>
     <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
 <script src="donatefndsscript.js"></script>
 <script src="appDonation.js"></script>
+
 <style>
     #account {
         color: gray;
