@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.5.0;
 
 contract Donations{
@@ -9,6 +10,7 @@ contract Donations{
         uint amt;
         string comment;
         bool completed;
+        bool spent;
     }
 
     mapping(uint=>Donation) public donations;
