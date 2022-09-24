@@ -125,7 +125,13 @@
         <option value="child education">child education</option>
         <option value="collaboration events">collaboration events</option>
     </select> -->
-
+    <script>
+        $("#donatebtn").on("click",function(){
+            const toPayAmt=parseInt($("#mbox").val())
+            const commentStr=$("#dbox").val()
+            App.makeDonation(toPayAmt,commentStr)
+        
+        })</script>
 </body>
 <!-- <script>
     account_Section = document.getElementById("account")
@@ -139,13 +145,7 @@
     <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
 <script src="donatefndsscript.js"></script>
 <script src="appDonation.js"></script>
-<script>
-$("#donatebtn").on("click",function(){
-    const toPayAmt=parseInt($("#mbox").val())
-    const commentStr=$("#dbox").val()
-    App.makeDonation(toPayAmt,commentStr)
 
-})</script>
 <style>
     #account {
         color: gray;
