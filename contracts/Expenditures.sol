@@ -10,7 +10,6 @@ uint public totalitems;
         string donation_id;
         bool spent;
     }
-    
 
     mapping(uint=>Expenditures) public donations;
 
