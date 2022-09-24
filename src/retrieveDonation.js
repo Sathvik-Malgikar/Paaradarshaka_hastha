@@ -36,7 +36,6 @@ account = web3.eth.accounts[0]
 console.log(account)
 }
 
-
 load = async () => {
 await loadweb3()
 await loadAccount()
@@ -51,5 +50,7 @@ async function loadContract(){
     contractjson = await $.getJSON("retrieve.json")
     Contractjson = TruffleContract(contractjson)
     Contractjson.setProvider(web3Provider)
-    console.log(await Contractjson.deployed())
+    deployed = await Contractjson.deployed()
+    donations = deployed.donations
+    console.log(donations[0])
     }
