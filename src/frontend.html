@@ -110,6 +110,7 @@
         .btn{
             display:flex;
             flex-direction: row;
+            width:50%;
         }
         .sparsha{
             margin-top:10px;
@@ -138,7 +139,7 @@
         .button1{
             padding:5px;
             font-size:larger;
-            margin-left:25%;
+            margin-left:15%;
             margin-bottom:3%;
 
             box-shadow:5px 5px 10px black;
@@ -147,29 +148,43 @@
  
             padding:5px;
             font-size:larger;
-            margin-left:32%;
+            margin-left:22%;
             margin-bottom:3%;
             box-shadow:5px 5px 10px black;
         }
         .button3{
             padding:5px;
             font-size:20px;
-            margin-left:45%;
+            margin-left:17%;
             margin-bottom:3%;
+            margin-top:10%;
+            height:40px;
             width:120px;
             border-radius: 15px;
             color:white;
             font-weight: bold;
             background-color: #1261A0;
+            box-shadow: 5px 5px 5px black;
         }
-        .header{
+        .middle{
+            display:flex;
+            flex-direction: row;
+            gap:200px;
+        }
+        .photo{
+            width:50%;
+            height: 30%;
+            margin-bottom: 10px;
+        }
+        #header{
             margin:10%;
-            font-size: 50px;
+            font-size: 30px;
+            margin-bottom: 0px;
         }
         .div{
             background-color:rgba(43, 161, 224, 0.276);
             border:0px solid black;
-            height:40%;
+            height:10%;
             width:100%;
         }
     </style>
@@ -208,7 +223,10 @@
             <button class="button1"  inline="true">For School</button>
             <button class="button2"  inline="true">For students</button>
         </div>
-        <button class="button3">Donate</button>
+        <div class="middle" >
+            <button class="button3">Donate</button>
+            <img class="photo" src="side.jpeg">
+        </div>
     </div>
         <div class="body2">
             <h4 class="header4">About Us</h4>
