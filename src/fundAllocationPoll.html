@@ -40,13 +40,6 @@
             text-align: left;
         } */
     </style>
-    <script>
-        $(document).ready(function(){
-            $(".option").click(function(){
-                $(this).css("background","yellow");
-            });
-        });
-    </script>
 </head>
 <body>
     <h1 id ="header">Decision poll page</h1><br>
@@ -56,17 +49,16 @@
     <div class="poll">
         <span class="title">What Issue to solve now?</span>
         <div class="option 1">
-            <span id="btn" >1.Student Medication</span>
+            <input type="radio" id="btn" name="btn">Student Medication
         </div>
         <div class="option 2">
-            <span id="btn">2.Student Education</span>
+            <input type="radio" id="btn" name="btn">Student Education
         </div>
         <div class="option 3">
-            <span id="btn">3.Student Enrichment</span>
+            <input type="radio" id="btn" name="btn">Student Enrichment
         </div>
         <div class="option 4">
-            <span id="btn">4.Student Shelter</span>
+            <input type="radio" id="btn" name="btn">Student Shelter
         </div>
     </div>
 </body>
-</html>
