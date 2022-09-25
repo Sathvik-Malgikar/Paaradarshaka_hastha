@@ -55,6 +55,29 @@ async function loadContract() {
   Contractjson = TruffleContract(contractjson);
   Contractjson.setProvider(web3Provider);
   deploye = await Contractjson.deployed();
-  donations = deploye.donations;
-  console.log(await donations);
+  dc = await deploye.donationCount()
+
+  
+}
+
+async function match (inputid){
+  for ( i=0;i<=await dc.toNumber();i++)
+  {
+    val1 = await deploye.donations(i);
+    id =await val1[0].toNumber();
+
+    console.log ( await val1[4] );
+
+  if(id == parseInt( inputid)){
+    $("#header").append("<br>Transaction was successful!")
+    deploye.spendDonation(inputid);
+  }else{
+    idfield.value = "Not found!"}
+  }
+}
+btn = document.getElementById("retrieve")
+idfield = document.getElementById("idfield")
+btn.onclick=()=>{
+  inputid = idfield.value
+  match (inputid)
 }
