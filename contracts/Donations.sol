@@ -15,13 +15,6 @@ contract Donations{
 
     mapping(uint=>Donation) public donations;
 
-event donationSpent(uint, bool);
-function spendDonation(uint id) public {
-    Donation memory _donation  = donations[id];
-
-_donation.spent=true;
-emit donationSpent (id,_donation.spent );
-}
 // function getDonationObject  (uint i) public {
 //     return i*i;
 // }
@@ -53,4 +46,14 @@ event DonationMade(
         emit DonationCompleted(_id,_donation.completed);
     }
 
+event donationSpent(uint _id, bool spent);
+
+function spendDonation(uint _id) public {
+
+Donation memory _donation  = donations[_id];
+
+_donation.spent=!_donation.spent;
+donations[_id] = _donation;
+emit donationSpent(_id,_donation.spent );
+}
 }

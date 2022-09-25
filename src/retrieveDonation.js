@@ -1,3 +1,4 @@
+
 async function loadweb3() {
   if (typeof web3 !== "undefined") {
     web3Provider = web3.currentProvider;
@@ -55,12 +56,14 @@ async function loadContract() {
   contractjson = await $.getJSON("Donations.json");
   Contractjson =await TruffleContract(contractjson);
   Contractjson.setProvider(web3Provider);
-  deploye = await Contractjson.deployed();
-  dc = await deploye.donationCount()
-  console.log(dc.toNumber())
+const deploye = await Contractjson.deployed();
+dc = await deploye.donationCount()
+console.log(dc.toNumber())
 }
 
-async function match (inputid){
+match  = async (inputid) => {
+  const deploye = await Contractjson.deployed();
+  dc = await deploye.donationCount()
   for ( i=0;i<=await dc.toNumber();i++)
   {
     val1 = await deploye.donations(i);
@@ -69,8 +72,10 @@ async function match (inputid){
 
   if(id == parseInt( inputid)){
     $("#header").append("<br>Transaction was successful!")
-    deploye.spendDonation(inputid);
-    break
+    // console.log(await deploye.spendDonation)
+   await deploye.spendDonation( parseInt(inputid));
+  // deploye.makeDonation("2","test")
+    break;
   }else{
     idfield.value = "Not found!"}
   }
