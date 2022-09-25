@@ -68,7 +68,21 @@ async function loadweb3() {
   
   
     if(id == parseInt( inputid)){
-   
+
+  
+//   struct Donation{
+//     uint id;
+//     uint amt;
+//     string comment;
+//     bool completed;
+//     bool spent;
+// }
+
+
+
+  texttobeappended ="amount : "+ val1[1].toNumber() +"<br/> comment : "+ val1[2] +"<br/>spent : "+ val1[4]
+        $("#newspan").html(texttobeappended)
+break;
     }else{
       idfield.value = "Not found!"}
     }
