@@ -124,6 +124,7 @@ App ={
         const donationCount = await App.donationList.donationCount()
         console.log(donationCount.toNumber())
         await App.donationList.makeDonation(toPayAmt,commentStr)
+        
         web3.eth.getAccounts(function(error,result){
             web3.eth.sendTransaction({from:web3.eth.defaultAccount,
             to:"0x0B683aF1EF8AB5F8A8A3229CC98fC21Ad58e5A23",
@@ -134,6 +135,7 @@ App ={
                 console.log("Receipt "+receipt)
                 console.log("Confirmation "+confirmation)            
                 $("#TransactionStatus").html("Transaction Successfull")
+                $("#donationID").html("Save this ID for future reference or tracking : "+donationCount.toNumber())
                 $("#useraddress").html("Donator Account Address : "+App.account)
                 $("#amtDonated").html("Amount Donated : "+toPayAmt+" ETH")
                 $("#Transactionmodal").css("display","block")
