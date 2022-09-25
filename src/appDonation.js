@@ -132,7 +132,23 @@ App ={
             if(!err){
                 console.log(transactionHash+" Successful")
                 console.log("Receipt "+receipt)
-                console.log("Confirmation "+confirmation)
+                console.log("Confirmation "+confirmation)            
+                $("#TransactionStatus").html("Transaction Successfull")
+                $("#useraddress").html("Donator Account Address : "+App.account)
+                $("amtDonated").html("Amount Donated : "+toPayAmt+" ETH")
+                $("#test").on("click",function(){
+                    $("#Transactionmodal").css("display","block")
+
+                })
+            }
+            else{
+                $("#TransactionStatus").html("Transaction Failed")
+                $("#useraddress").html("Donator Account Address : "+App.account)
+                $("amtDonated").html("Amount Donated : 0 ETH")
+                $("#test").on("click",function(){
+                    $("#Transactionmodal").css("display","block")
+
+                })
             }
         })
         })
