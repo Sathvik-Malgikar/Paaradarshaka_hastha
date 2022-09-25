@@ -66,7 +66,6 @@ async function match (inputid){
     val1 = await deploye.donations(i);
     id =await val1[0].toNumber();
 
-    console.log ( await val1[4] );
 
   if(id == parseInt( inputid)){
     $("#header").append("<br>Transaction was successful!")
