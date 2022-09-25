@@ -84,7 +84,7 @@ async function loadweb3() {
         $("#newspan").html(texttobeappended)
 break;
     }else{
-      idfield.value = "Not found!"}
+      idfield.value = ""}
     }
   }
   btn = document.getElementById("button")
