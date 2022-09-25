@@ -35,10 +35,14 @@
             border-radius: 5px;
             background-color: aliceblue;
         }
+        /* #btn{
+            width:100%;
+            text-align: left;
+        } */
     </style>
     <script>
         $(document).ready(function(){
-            $("#btn").click(function(){
+            $(".option").click(function(){
                 $(this).css("background","yellow");
             });
         });
@@ -50,18 +54,18 @@
     <label for="Name" id="name">Name:</label>
     <input type="text" id="name"><br><br>
     <div class="poll">
-        <span class="title">Select Issue</span>
+        <span class="title">What Issue to solve now?</span>
         <div class="option 1">
-            <button id="btn" >1.Student Medication</button>
+            <span id="btn" >1.Student Medication</span>
         </div>
         <div class="option 2">
-            <button id="btn">2.Student Education</button>
+            <span id="btn">2.Student Education</span>
         </div>
         <div class="option 3">
-            <button id="btn">3.Student Enrichment</button>
+            <span id="btn">3.Student Enrichment</span>
         </div>
         <div class="option 4">
-            <button id="btn">4.Student Shelter</button>
+            <span id="btn">4.Student Shelter</span>
         </div>
     </div>
 </body>
