@@ -136,19 +136,13 @@ App ={
                 $("#TransactionStatus").html("Transaction Successfull")
                 $("#useraddress").html("Donator Account Address : "+App.account)
                 $("amtDonated").html("Amount Donated : "+toPayAmt+" ETH")
-                $("#test").on("click",function(){
-                    $("#Transactionmodal").css("display","block")
-
-                })
+                $("#Transactionmodal").css("display","block")
             }
             else{
                 $("#TransactionStatus").html("Transaction Failed")
                 $("#useraddress").html("Donator Account Address : "+App.account)
                 $("amtDonated").html("Amount Donated : 0 ETH")
-                $("#test").on("click",function(){
-                    $("#Transactionmodal").css("display","block")
-
-                })
+                $("#Transactionmodal").css("display","block")
             }
         })
         })
