@@ -37,7 +37,8 @@ async function loadweb3() {
 }
 
 async function loadAccount() {
-  account = web3.eth.accounts[0];
+  account = web3.eth.accounts[0]
+  web3.eth.defaultAccount = web3.eth.coinbase
   console.log(account);
 }
 
@@ -52,12 +53,11 @@ if (window.load()) {
 
 async function loadContract() {
   contractjson = await $.getJSON("Donations.json");
-  Contractjson = TruffleContract(contractjson);
+  Contractjson =await TruffleContract(contractjson);
   Contractjson.setProvider(web3Provider);
   deploye = await Contractjson.deployed();
   dc = await deploye.donationCount()
-
-  
+  console.log(dc.toNumber())
 }
 
 async function match (inputid){
@@ -70,6 +70,7 @@ async function match (inputid){
   if(id == parseInt( inputid)){
     $("#header").append("<br>Transaction was successful!")
     deploye.spendDonation(inputid);
+    break
   }else{
     idfield.value = "Not found!"}
   }
