@@ -135,13 +135,13 @@ App ={
                 console.log("Confirmation "+confirmation)            
                 $("#TransactionStatus").html("Transaction Successfull")
                 $("#useraddress").html("Donator Account Address : "+App.account)
-                $("amtDonated").html("Amount Donated : "+toPayAmt+" ETH")
+                $("#amtDonated").html("Amount Donated : "+toPayAmt+" ETH")
                 $("#Transactionmodal").css("display","block")
             }
             else{
                 $("#TransactionStatus").html("Transaction Failed")
                 $("#useraddress").html("Donator Account Address : "+App.account)
-                $("amtDonated").html("Amount Donated : 0 ETH")
+                $("#amtDonated").html("Amount Donated : 0 ETH")
                 $("#Transactionmodal").css("display","block")
             }
         })
