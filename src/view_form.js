@@ -68,7 +68,7 @@ async function loadweb3() {
   
   
     if(id == parseInt( inputid)){
-      //
+   
     }else{
       idfield.value = "Not found!"}
     }
